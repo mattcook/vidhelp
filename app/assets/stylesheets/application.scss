@@ -18,6 +18,20 @@ body {
 }
 
 #remoteVideos video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+}
+
+/* #remoteVideos video {
   right: 0;
   bottom: 0;
   margin-top: -40px;
@@ -26,31 +40,31 @@ body {
   width: 100%;
   height: auto;
   z-index: -100;
-  background-size: cover;
+  background-size: contain;
 }
+ */
 
 #allVideos {
-  margin-top: -70px;
-  left: 5px;
-  bottom: 0;
-  opacity: 0.8;
+  left: 0px;
+  bottom: -10px;
+  position: fixed;
+  background-color: rgba(0,0,0,0.4);
 
   li {
     position: relative;
-    padding: 0 5px 0 0;
+    padding: 3px;
   }
   video {
-    width: 90px;
-    height: 90px;
+    width: 120px;
+    height: auto;
   }
 
   .name {
     position: absolute;
     color: white;
-    right: 5px;
-    bottom: 20px;
+    right: 7px;
+    bottom: 2px;
     font-size: 0.8em;
-    background-color: rgba(0,0,0,0.3);
   }
 }
 #messages {
