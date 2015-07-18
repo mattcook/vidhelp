@@ -51,7 +51,7 @@ $(function() {
 
     function start() {
       var pusher = new Pusher($('#chat').data().apiKey, {
-        authEndpoint: '/pusher/auth',
+        authEndpoint: '/auth/pusher',
         auth: {
           params: currentUser
         }
