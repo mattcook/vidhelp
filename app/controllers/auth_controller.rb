@@ -1,7 +1,7 @@
-class PusherController < ApplicationController
+class AuthController < ApplicationController
   protect_from_forgery except: :auth
 
-  def auth
+  def pusher
     response = Pusher[params[:channel_name]].authenticate params[:socket_id],
       user_id: params[:id],
       user_info: { name: params[:name] }
