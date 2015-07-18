@@ -2,6 +2,11 @@
 @import 'bootstrap';
 @import '_navbar';
 @import '_footer';
+@import '_chat';
+
+body {
+  background-color: #333;
+}
 
 #localVideo {
   -moz-transform: scaleX(-1);
@@ -13,40 +18,39 @@
 }
 
 #remoteVideos video {
-  position: fixed;
   right: 0;
   bottom: 0;
+  margin-top: -40px;
   min-width: 100%;
   min-height: 100%;
-  width: auto;
+  width: 100%;
   height: auto;
   z-index: -100;
   background-size: cover;
 }
 
 #allVideos {
-  position: fixed;
-  margin: 0;
+  margin-top: -70px;
   left: 5px;
   bottom: 0;
+  opacity: 0.8;
 
   li {
     position: relative;
     padding: 0 5px 0 0;
   }
   video {
-    width: 160px;
+    width: 90px;
     height: 90px;
   }
 
   .name {
     position: absolute;
     color: white;
-    font-weight: bold;
     right: 5px;
-    bottom: 5px;
-    background-color: black;
-    padding: 2px 5px;
+    bottom: 20px;
+    font-size: 0.8em;
+    background-color: rgba(0,0,0,0.3);
   }
 }
 #messages {
