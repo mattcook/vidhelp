@@ -13,6 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require pusher
+//= require hark
+//= require simplepeer
 
 // not a real GUID, but it will do
 // http://stackoverflow.com/questions/105034/how-to-create-a-guid-uuid-in-javascript

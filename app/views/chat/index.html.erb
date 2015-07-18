@@ -4,8 +4,6 @@
 <head>
     <title>PusherTC</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
-    <link rel="stylesheet" href="application.css">
-    <script src="application.js"> </script>
 </head>
 
 <body id="#{controller.controller_name}" class="#{controller.action_name}">
@@ -42,7 +40,7 @@
                     </form>
                 </div>
             </div>
-            <div id="chat" data-api-key="#{Pusher.key}" data-auth-endpoint="#{pusher_auth_path}"></div>
+            <div id="chat" data-api-key="<%= Pusher.key %>" data-auth-endpoint="<%= pusher_auth_path %>"</div>
             <br />
             <div id="remoteVideos"></div>
             <ul class="list-inline" id="allVideos">
