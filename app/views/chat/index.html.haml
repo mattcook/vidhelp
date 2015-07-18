@@ -2,7 +2,7 @@
 
 #chat{"data-api-key" => Pusher.key, "data-auth-endpoint" => pusher_auth_path}
   %br/
-  #remoteVideos
+  .video-container#remoteVideos
   %ul#allVideos.list-inline
     %li
       %video#localVideo{:autoplay => "", :muted => "muted"}
