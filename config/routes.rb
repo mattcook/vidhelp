@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  match '/pusher/auth' => 'pusher#auth', via: :post
-  root to: 'chat#index'
+  match '/auth/pusher' => 'auth#pusher', via: :post
+  root to: 'chats#index'
 
-  resources :chat, only: [:index]
+  resources :chats, only: [:index]
+  resources :rooms, only: [:index]
 end
