@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PusherTC</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <link rel="stylesheet" href="application.css"
+    <script src="application.js">
+</head>
+
+<body id="controller.controller_name" class="controller.action_name">
+    <div class="wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="button navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/">PusherTC</a></div>
+                <div class="collapse navbar-collapse">
+                    <form class="navbar-form navbar-right" id="send-message">
+                        <div class="form-group">
+                            <input class="form-control" id="message" />
+                        </div>
+                        <button class="btn btn-success" type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="modal fade" id="name-prompt">
+                <div class="modal-dialog">
+                    <form>
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <h4 class="modal-title">What's your name?</h4></div>
+                            <div class="modal-body">
+                                <input autofocus="" class="form-control" />
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-success" type="submit">Ok</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="chat"></div> //chat data-api-key=Pusher.key data-auth-endpoint=pusher_auth_path
+            <br />
+            <div id="remoteVideos"></div>
+            <ul class="list-inline" id="allVideos">
+                <li>
+                    <video autoplay="" id="localVideo" muted="muted"></video>
+                </li>
+            </ul>
+            <dl class="dl-horizontal" id="messages"></dl>
+        </div>
+    </div>
+</body>
+
+</html>
