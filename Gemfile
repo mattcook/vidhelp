@@ -15,6 +15,8 @@ gem 'puma'
 gem 'pusher'
 gem 'mysql2'
 gem 'dotenv-rails'
+gem 'active_model_serializers'
+gem 'acts_as_list'
 
 group :development, :test do
   gem 'byebug'

@@ -1,5 +1,8 @@
 =render 'chats/name_prompt'
 
+%div{"ng-controller" => "ChatCtrl"}
+  %h1 {{ title }}
+
 #chat{"data-api-key" => Pusher.key, "data-auth-endpoint" => auth_pusher_path}
   %br/
   .video-container#remoteVideos
