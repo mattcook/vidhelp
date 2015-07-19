@@ -64,7 +64,9 @@ var drawFunction = (function () {
       var sx = (x0 < x1) ? 1 : -1, sy = (y0 < y1) ? 1 : -1, err = dx - dy;
       while (true) {
         //write the pixel into Firebase, or if we are drawing white, remove the pixel
-        pixelDataRef.child(x0 + ":" + y0).set(currentColor === "fff" ? null : currentColor);
+        var xcords = (x0/window.innerWidth).toString().replace('.', '-');
+        var ycords = (y0/window.innerHeight).toString().replace('.', '-');
+        pixelDataRef.child(xcords + ":" + ycords).set(currentColor === "fff" ? null : currentColor);
 
         if (x0 == x1 && y0 == y1) break;
         var e2 = 2 * err;
@@ -86,8 +88,10 @@ var drawFunction = (function () {
     // Note that child_added events will be fired for initial pixel data as well.
     var drawPixel = function(snapshot) {
       var coords = snapshot.key().split(":");
+      var drawxcords = parseFloat(coords[0].replace('-', '.')) * window.innerWidth;
+      var drawycords = parseFloat(coords[1].replace('-', '.')) * window.innerHeight;
       myContext.fillStyle = "#" + snapshot.val();
-      myContext.fillRect(parseInt(coords[0]) * pixSize, parseInt(coords[1]) * pixSize, pixSize, pixSize);
+      myContext.fillRect(parseInt(drawxcords) * pixSize, parseInt(drawycords) * pixSize, pixSize, pixSize);
     };
     var clearPixel = function(snapshot) {
       var coords = snapshot.key().split(":");
@@ -99,6 +103,6 @@ var drawFunction = (function () {
   }
 
   $('#clear-drawing').on('click', function(){
-    pixelDataRef.remove();
+
   });
 });
