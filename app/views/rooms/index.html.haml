@@ -10,7 +10,6 @@
         %tbody
           - @rooms.each do |room|
             %tr
-              %td= room.id
-              %td= link_to room.name, room_path(room.uuid)
-              %td= room.description
-              %td= room.created_at.to_formatted_s(:long)
+              %td= room[:id]
+              %td= link_to room[:name], room_path(room[:uuid])
+              %td= room[:description]

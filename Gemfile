@@ -19,11 +19,9 @@ gem 'acts_as_list'
 
 group :production do
   gem 'rails_12factor'
-  gem 'pg'
 end
 
 group :development, :test do
-  gem 'mysql2'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
