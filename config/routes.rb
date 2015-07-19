@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   root to: 'rooms#index'
 
   resources :chats, only: [:new, :show]
-  resources :rooms, only: [:create, :index, :show, :destroy]
+  resources :rooms, only: [:create, :index, :show]
+
+  match '/payment' => 'rooms#delete', via: :get
 end

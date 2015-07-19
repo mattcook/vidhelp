@@ -11,5 +11,5 @@
       %form.navbar-form.navbar-right
         %a.user-name Jason Shim
         = link_to "Create Chat", chat_path(123212312), id: 'start-chat', class: 'btn btn-success'
-        = link_to "End Chat", root_path, id: 'end-chat', class: 'btn btn-danger hidden'
+        = link_to "End Chat", '/payment', id: 'end-chat', class: 'btn btn-danger hidden'
         %button#clear-drawing.btn.btn-default.hidden{:type => "button"} Clear

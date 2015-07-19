@@ -66,6 +66,7 @@ function conversationStarted(conversation) {
     conversation.localMedia.stop();
     conversation.disconnect();
     $('.video-overlay').removeClass('hidden');
+    location.href = '/payment';
   });
 };
 
