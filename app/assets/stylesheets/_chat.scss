@@ -25,3 +25,12 @@
   background: rgba(0,0,0,0.7);
   z-index: 100;
 }
+
+canvas#drawing-canvas {
+  top: 52px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+  position: fixed;
+}

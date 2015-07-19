@@ -8,6 +8,7 @@
 //= require pusher
 //= require hark
 //= require simplepeer
+//= require draw
 //= require chat
 
 //= require_tree .

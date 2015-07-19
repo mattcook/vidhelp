@@ -24,7 +24,8 @@ $(function(){
   Twilio.getUserMedia().then(
     function (mediaStream) {
       previewMedia.addStream(mediaStream);
-      previewMedia.attach('#allVideos');
+      previewMedia.attach('#remoteVideos');
+      drawFunction();
     },
     function (error) {
       console.error('Unable to access local media', error);

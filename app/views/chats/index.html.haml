@@ -3,10 +3,11 @@
 %div{"ng-controller" => "ChatCtrl"}
   #chat{"data-api-key" => Pusher.key, "data-auth-endpoint" => auth_pusher_path}
     %br/
-    .video-overlay
-      .center-div
-        %button.btn.btn-success.btn-lg.open-chat-button{:type => "submit"} Enter Room
+    -# .video-overlay
+    -#   .center-div
+    -#     %button.btn.btn-success.btn-lg.open-chat-button{:type => "submit"} Enter Room
     .video-container#remoteVideos
+      %canvas#drawing-canvas
     %ul#allVideos.list-inline
       %li
         %video#localVideo{:autoplay => "", :muted => "muted"}
