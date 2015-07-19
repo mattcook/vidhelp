@@ -8,9 +8,11 @@
       %a.navbar-brand{:href => "/"} Vidhelp
     .collapse.navbar-collapse
       #colorholder
-      %form#send-message.navbar-form.navbar-right
+      %form.navbar-form.navbar-right
         .form-group.hidden
           %input#message.form-control/
           %button.btn.btn-success{:type => "submit"} Send Message
-        %button#clear-drawing.btn.btn-danger.hidden{:type => "button"} Clear
-      %a.user-name.pull-right Jason Shim
+        %a.user-name Jason Shim
+
+        = link_to "Create Chat", new_chat_path, class: 'btn btn-success'
+        %button#clear-drawing.btn.btn-danger{:type => "button"} Clear
