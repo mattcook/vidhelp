@@ -88,8 +88,9 @@ body {
   opacity: 0.7;
 }
 
-a.user-name.pull-right {
+a.user-name {
   padding-top: 14px;
+  padding-right: 15px;
   color: #777;
   text-decoration: none;
 }
@@ -130,6 +131,7 @@ h2.hero-text {
   height: 250px;
   width: 250px;
   margin-right: 50px;
+  cursor: pointer;
 
   &.laundry {
     background-image: url("/assets/laundry.jpg");
