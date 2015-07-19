@@ -102,6 +102,6 @@ var drawFunction = (function () {
   }
 
   $('#clear-drawing').on('click', function(){
-
+    pixelDataRef.remove();
   });
 });
