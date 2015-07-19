@@ -3,10 +3,14 @@
     .panel-body
       %table.table.table-condensed
         %thead
-          %th Heading
-          %th Heading
+          %th Number
+          %th Name
+          %th Description
+          %th Created
         %tbody
           - @rooms.each do |room|
             %tr
-              %td= room[:id]
-              %td= room[:name]
+              %td= room.id
+              %td= link_to room.name, room_path(room.uuid)
+              %td= room.description
+              %td= room.created_at.to_formatted_s(:long)
