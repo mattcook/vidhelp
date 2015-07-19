@@ -17,6 +17,7 @@ gem 'mysql2'
 gem 'dotenv-rails'
 gem 'active_model_serializers'
 gem 'acts_as_list'
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'byebug'
