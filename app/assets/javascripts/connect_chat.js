@@ -59,5 +59,10 @@ function conversationStarted(conversation) {
     console.log("Connected to Twilio. Listening for incoming Invites as '" + endpoint.address + "'");
     conversation.localMedia.stop();
     conversation.disconnect();
+    $('.video-overlay').removeClass('hidden');
   });
 };
+
+$('#enter-btn').on('click',function(){
+  $('.video-overlay').addClass('hidden');
+});
