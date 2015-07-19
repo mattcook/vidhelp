@@ -9,10 +9,7 @@
     .collapse.navbar-collapse
       #colorholder
       %form.navbar-form.navbar-right
-        .form-group.hidden
-          %input#message.form-control/
-          %button.btn.btn-danger{:type => "submit"} End Chat
         %a.user-name Jason Shim
-
-        = link_to "Create Chat", chat_path(1232321312312), class: 'btn btn-success'
+        = link_to "Create Chat", chat_path(123212312), id: 'start-chat', class: 'btn btn-success'
+        = link_to "End Chat", root_path, id: 'end-chat', class: 'btn btn-danger hidden'
         %button#clear-drawing.btn.btn-default{:type => "button"} Clear

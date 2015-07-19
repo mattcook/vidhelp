@@ -3,6 +3,11 @@ window.accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiIsImN0eSI6InR3aWxpby1zYX
 
 var endpoint;
 
+$(function(){
+  $('#end-chat').removeClass('hidden');
+  $('#start-chat').addClass('hidden');
+});
+
 // check for WebRTC
 if (!navigator.webkitGetUserMedia && !navigator.mozGetUserMedia) {
   alert('WebRTC is not available in your browser.');
