@@ -12,6 +12,7 @@
             - @rooms.each do |room|
               %tr
                 %td= room[:id]
-                %td= link_to room[:name], room_path(room[:uuid])
+                %td= link_to room[:name], chat_path(room[:uuid])
                 %td= room[:description]
                 %td= Time.now.to_formatted_s(:short)
+            = link_to "Create Chat", new_chat_path, class: 'btn btn-success'
