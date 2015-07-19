@@ -6,6 +6,7 @@ var endpoint;
 $(function(){
   $('#end-chat').removeClass('hidden');
   $('#start-chat').addClass('hidden');
+  $('#clear-drawing').removeClass('hidden');
 });
 
 // check for WebRTC
