@@ -64,7 +64,6 @@ $(function() {
         for (var userId in channel.members.members) {
           if (userId != currentUser.id) {
             var member = channel.members.members[userId];
-
             peers[userId] = initiateConnection(userId, member.name)
           }
         }
@@ -96,7 +95,7 @@ $(function() {
           peer.destroy();
           peers[userId] = undefined;
         }
-        $("[data-user-id='" + userId + "']").remove();
+        $("[data-user-id='" + userId + "']").addClass('hidden');
         appendMessage(name, '<em>Disconnected</em>');
       }
 
@@ -115,8 +114,8 @@ $(function() {
 
         peer.on('message', function (data) {
           if (data == '__SPEAKING__') {
-            $('#remoteVideos video').hide();
-            $("#remoteVideos video[data-user-id='" + peerUserId + "']").show();
+            $('#remoteVideos video').addClass('hidden');
+            $("#remoteVideos video[data-user-id='" + peerUserId + "']").removeClass('hidden');
           } else {
             appendMessage(peerUserName, data);
           }
