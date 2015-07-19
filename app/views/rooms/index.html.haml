@@ -1,16 +1,17 @@
 .row
-  %section.panel
-    .panel-body
-      %table.table.table-condensed
-        %thead
-          %th Number
-          %th Name
-          %th Description
-          %th Created
-        %tbody
-          - @rooms.each do |room|
-            %tr
-              %td= room[:id]
-              %td= link_to room[:name], room_path(room[:uuid])
-              %td= room[:description]
-              %td= Time.now.to_formatted_s(:short)
+  .col-xs-10.col-xs-offset-1
+    %section.panel
+      .panel-body
+        %table.table.table-condensed
+          %thead
+            %th Number
+            %th Name
+            %th Description
+            %th Created
+          %tbody
+            - @rooms.each do |room|
+              %tr
+                %td= room[:id]
+                %td= link_to room[:name], room_path(room[:uuid])
+                %td= room[:description]
+                %td= Time.now.to_formatted_s(:short)

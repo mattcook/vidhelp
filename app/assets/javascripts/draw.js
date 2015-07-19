@@ -95,7 +95,9 @@ var drawFunction = (function () {
     };
     var clearPixel = function(snapshot) {
       var coords = snapshot.key().split(":");
-      myContext.clearRect(parseInt(coords[0]) * pixSize, parseInt(coords[1]) * pixSize, pixSize, pixSize);
+      var drawxcords = parseFloat(coords[0].replace('-', '.')) * window.innerWidth;
+      var drawycords = parseFloat(coords[1].replace('-', '.')) * window.innerHeight;
+      myContext.clearRect(parseInt(drawxcords) * pixSize, parseInt(drawycords) * pixSize, pixSize, pixSize);
     };
     pixelDataRef.on('child_added', drawPixel);
     pixelDataRef.on('child_changed', drawPixel);
@@ -103,6 +105,7 @@ var drawFunction = (function () {
   }
 
   $('#clear-drawing').on('click', function(){
-
+    pixelDataRef.remove();
+    clearPixel();
   });
 });
