@@ -16,7 +16,6 @@ gem 'pusher'
 gem 'dotenv-rails'
 gem 'active_model_serializers'
 gem 'acts_as_list'
-gem 'mysql2'
 
 group :production do
   gem 'rails_12factor'
