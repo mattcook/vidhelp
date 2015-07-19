@@ -1,25 +1,24 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: 5
+
 development:
   encoding: utf8
   username: root
   adapter: mysql2
   database: vidhelp_dev
-  pool: 5
-  timeout: 5000
 
 test:
   encoding: utf8
   username: root
   adapter: mysql2
-  database: alchemist_test
-  pool: 5
-  timeout: 5000
+  database: vidhelp_dev
 
 production:
-  encoding: utf8
-  username: <%= ENV['DB_USER'] %>
-  password: <%= ENV['DB_PASS'] %>
-  host: <%= ENV['DB_HOST'] %>
-  adapter: mysql2
-  database: vidhelp_prod
-  pool: 5
-  timeout: 5000
+  <<: *default
+  database: d1ok6pbif1rtb9
+  username: sevlkfdmljegye
+  password: 239OpmgMcI99-5yulGnoKGvJs7

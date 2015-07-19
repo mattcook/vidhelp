@@ -13,13 +13,17 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'puma'
 gem 'pusher'
-gem 'mysql2'
 gem 'dotenv-rails'
 gem 'active_model_serializers'
 gem 'acts_as_list'
-gem 'rails_12factor', group: :production
+
+group :production do
+  gem 'rails_12factor'
+  gem 'pg'
+end
 
 group :development, :test do
+  gem 'mysql2'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
