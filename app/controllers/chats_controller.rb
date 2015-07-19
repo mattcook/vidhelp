@@ -1,10 +1,10 @@
 class ChatsController < ApplicationController
 
-  def index
+  def new
     @room = Room.last
   end
   def show
-    @room = Room.last
+    @room = Room.find_by(uuid: params[:uuid])
   end
 
   def connect

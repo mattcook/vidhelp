@@ -30,7 +30,6 @@ var drawFunction = (function () {
   }
 
   function resizeCanvas() {
-    console.log("CANVAS HAS BEEN RESIZED!");
     var va = document.getElementById('remoteVideos').childNodes
     var videoContainerInnerVideo = va[va.length -1]
     var videoWidth = videoContainerInnerVideo.offsetWidth
@@ -43,8 +42,6 @@ var drawFunction = (function () {
   resizeCanvas();
 
   function drawStuff() {
-    console.log("STUFF IS BEING DRAWN");
-
     //Keep track of if the mouse is up or down
     myCanvas.onmousedown = function () {mouseDown = 1;};
     myCanvas.onmouseout = myCanvas.onmouseup = function () {
