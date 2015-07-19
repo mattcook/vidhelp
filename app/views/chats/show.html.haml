@@ -3,6 +3,10 @@
 %div{"ng-controller" => "ChatCtrl"}
   #chat{"data-api-key" => Pusher.key, "data-auth-endpoint" => auth_pusher_path}
     %br/
+    .video-overlay
+      .center-div
+        %form.form-inline.open-chat-group
+          %h3{:style => 'color:white;'} Waiting For Connection...
     .video-container#remoteVideos
     %ul#allVideos.list-inline{"data-access-token" => @room[:endpoint]}
       %canvas#drawing-canvas

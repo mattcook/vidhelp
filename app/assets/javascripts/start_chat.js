@@ -43,6 +43,7 @@ function conversationStarted(conversation) {
   console.log("In an active Conversation");
   // when a participant joins, draw their video on screen
   conversation.on('participantConnected', function (participant) {
+    $('.video-overlay').addClass('hidden');
     console.log("Participant '" + participant.address + "' connected");
     participant.media.attach('#remoteVideos');
     drawFunction();
@@ -56,7 +57,7 @@ function conversationStarted(conversation) {
     console.log("Connected to Twilio. Listening for incoming Invites as '" + endpoint.address + "'");
     conversation.localMedia.stop();
     conversation.disconnect();
-    location.href='/';
+    $('.video-overlay').removeClass('hidden');
   });
 };
 
