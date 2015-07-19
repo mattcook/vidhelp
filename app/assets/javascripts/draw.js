@@ -3,7 +3,7 @@ var drawFunction = (function () {
   var pixSize = 4, lastPoint = null, currentColor = "000", mouseDown = 0;
 
   //Create a reference to the pixel data for our drawing.
-  var pixelDataRef = new Firebase('https://xn0cgz0p8l0.firebaseio-demo.com/');
+  var pixelDataRef = new Firebase('https://xn0cgz0p8l0.firebaseio-demo.com/drawing/1');
 
   // Set up our canvas
   var myCanvas = document.getElementById('drawing-canvas');
@@ -100,4 +100,8 @@ var drawFunction = (function () {
     pixelDataRef.on('child_changed', drawPixel);
     pixelDataRef.on('child_removed', clearPixel);
   }
+
+  $('#clear-drawing').on('click', function(){
+
+  });
 });

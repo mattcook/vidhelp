@@ -26,7 +26,6 @@ Twilio.getUserMedia().then(
   function (mediaStream) {
     previewMedia.addStream(mediaStream);
     previewMedia.attach('#allVideos');
-    drawFunction();
   },
   function (error) {
     console.error('Unable to access local media', error);
@@ -47,6 +46,7 @@ function conversationStarted(conversation) {
   conversation.on('participantConnected', function (participant) {
     console.log("Participant '" + participant.address + "' connected");
     participant.media.attach('#remoteVideos');
+    drawFunction();
   });
   // when a participant disconnects, note in log
   conversation.on('participantDisconnected', function (participant) {

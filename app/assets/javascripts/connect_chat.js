@@ -27,14 +27,12 @@ Twilio.getUserMedia().then(
   function (mediaStream) {
     previewMedia.addStream(mediaStream);
     previewMedia.attach('#remoteVideos');
-    drawFunction();
   },
   function (error) {
     console.error('Unable to access local media', error);
     console.log('Unable to access Camera and Microphone');
   }
 );
-
 
 // successfully connected!
 function endpointConnected() {
@@ -50,6 +48,7 @@ function conversationStarted(conversation) {
   conversation.on('participantConnected', function (participant) {
     console.log("Participant '" + participant.address + "' connected");
     participant.media.attach('#allVideos');
+    drawFunction();
   });
   // when a participant disconnects, note in log
   conversation.on('participantDisconnected', function (participant) {
