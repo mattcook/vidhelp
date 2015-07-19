@@ -3,9 +3,9 @@
 %div{"ng-controller" => "ChatCtrl"}
   #chat{"data-api-key" => Pusher.key, "data-auth-endpoint" => auth_pusher_path}
     %br/
-    -# .video-overlay
-    -#   .center-div
-    -#     %button.btn.btn-success.btn-lg.open-chat-button{:type => "submit"} Enter Room
+    .video-overlay
+      .center-div
+        %button#enter-btn.btn.btn-success.btn-lg.open-chat-button{:type => "submit"} Enter Room
     .video-container#remoteVideos
     %ul#allVideos.list-inline{"data-access-token" => @room[:endpoint]}
       %canvas#drawing-canvas

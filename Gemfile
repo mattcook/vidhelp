@@ -16,6 +16,8 @@ gem 'pusher'
 gem 'dotenv-rails'
 gem 'active_model_serializers'
 gem 'acts_as_list'
+gem 'paypal-sdk-rest'
+gem "braintree"
 
 group :production do
   gem 'rails_12factor'
