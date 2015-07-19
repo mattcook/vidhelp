@@ -4,7 +4,7 @@ class ChatsController < ApplicationController
     @room = Room.last
   end
   def show
-    @room = Room.find_by(uuid: params[:uuid])
+    @room = Room.last
   end
 
   def connect
