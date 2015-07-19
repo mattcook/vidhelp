@@ -1,32 +1,6 @@
-//
-//
-// (function() {
-//     var canvas = document.getElementById('canvas'),
-//             context = canvas.getContext('2d');
-//
-//     // resize the canvas to fill browser window dynamically
-//     window.addEventListener('resize', resizeCanvas, false);
-//
-//     function resizeCanvas() {
-//             canvas.width = window.innerWidth;
-//             canvas.height = window.innerHeight;
-//
-//             /**
-//              * Your drawings need to be inside this function otherwise they will be reset when
-//              * you resize the browser window and the canvas goes will be cleared.
-//              */
-//             drawStuff();
-//     }
-//     resizeCanvas();
-//
-//     function drawStuff() {
-//             // do your drawing stuff here
-//     }
-// })();
-
 var drawFunction = (function () {
   //Set up some globals
-  var pixSize = 8, lastPoint = null, currentColor = "000", mouseDown = 0;
+  var pixSize = 4, lastPoint = null, currentColor = "000", mouseDown = 0;
 
   //Create a reference to the pixel data for our drawing.
   var pixelDataRef = new Firebase('https://xn0cgz0p8l0.firebaseio-demo.com/');
@@ -42,9 +16,8 @@ var drawFunction = (function () {
 
   window.addEventListener('resize', resizeCanvas, false);
 
-
   //Setup each color palette & add it to the screen
-  var colors = ["fff","000","f00","0f0","00f","88f","f8d","f88","f05","f80","0f8","cf0","08f","408","ff8","8ff"];
+  var colors = ["fff","000","c0392b","e67e22","f1c40f","2ecc71","9b59b6"];
   for (c in colors) {
     var item = $('<div/>').css("background-color", '#' + colors[c]).addClass("colorbox");
     item.click((function () {
@@ -57,6 +30,7 @@ var drawFunction = (function () {
   }
 
   function resizeCanvas() {
+    console.log("CANVAS HAS BEEN RESIZED!");
     var va = document.getElementById('remoteVideos').childNodes
     var videoContainerInnerVideo = va[va.length -1]
     var videoWidth = videoContainerInnerVideo.offsetWidth
@@ -69,6 +43,7 @@ var drawFunction = (function () {
   resizeCanvas();
 
   function drawStuff() {
+    console.log("STUFF IS BEING DRAWN");
 
     //Keep track of if the mouse is up or down
     myCanvas.onmousedown = function () {mouseDown = 1;};

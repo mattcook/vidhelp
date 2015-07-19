@@ -34,3 +34,17 @@ canvas#drawing-canvas {
   z-index: 0;
   position: fixed;
 }
+
+#colorholder {
+  width: 250px;
+  height: 0px;
+  margin: 13px auto -13px auto;
+}
+
+.colorbox {
+  width: 22px;
+  height: 22px;
+  margin: 1px;
+  display: inline-block;
+  border: 1px solid black;
+}
