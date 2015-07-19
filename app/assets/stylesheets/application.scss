@@ -18,6 +18,20 @@ body {
    -ms-filter: "FlipH";
 }
 
+.logo img{
+  margin-top: 5px;
+}
+
+.btn-success{
+  background-color:#139DEA;
+  border-color: #139DEA;
+}
+
+.btn-success:hover{
+  background-color: darken(#139DEA, 10%);
+  border-color: darken(#139DEA, 10%);
+}
+
 /* #remoteVideos video {
   position: fixed;
   top: 50%;

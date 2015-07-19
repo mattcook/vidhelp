@@ -5,7 +5,8 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand{:href => "/"} Vidhelp
+      = link_to root_path, class: 'logo' do
+        = image_tag 'vidhelp-logo.png', height: '40px'
     .collapse.navbar-collapse
       #colorholder
       %form.navbar-form.navbar-right
