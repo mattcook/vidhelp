@@ -95,7 +95,7 @@ $(function() {
           peer.destroy();
           peers[userId] = undefined;
         }
-        $("[data-user-id='" + userId + "']").addClass('hidden');
+        $("[data-user-id='" + userId + "']").remove();
         appendMessage(name, '<em>Disconnected</em>');
       }
 
@@ -114,8 +114,8 @@ $(function() {
 
         peer.on('message', function (data) {
           if (data == '__SPEAKING__') {
-            $('#remoteVideos video').addClass('hidden');
-            $("#remoteVideos video[data-user-id='" + peerUserId + "']").removeClass('hidden');
+            $('#remoteVideos video').hide();
+            $("#remoteVideos video[data-user-id='" + peerUserId + "']").show();
           } else {
             appendMessage(peerUserName, data);
           }
