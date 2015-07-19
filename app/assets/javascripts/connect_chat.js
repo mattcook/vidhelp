@@ -26,7 +26,7 @@ previewMedia = new Twilio.LocalMedia();
 Twilio.getUserMedia().then(
   function (mediaStream) {
     previewMedia.addStream(mediaStream);
-    previewMedia.attach('#allVideos');
+    previewMedia.attach('#remoteVideos');
     drawFunction();
   },
   function (error) {
@@ -49,7 +49,7 @@ function conversationStarted(conversation) {
   // when a participant joins, draw their video on screen
   conversation.on('participantConnected', function (participant) {
     console.log("Participant '" + participant.address + "' connected");
-    participant.media.attach('#remoteVideos');
+    participant.media.attach('#allVideos');
   });
   // when a participant disconnects, note in log
   conversation.on('participantDisconnected', function (participant) {
