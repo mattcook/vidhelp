@@ -1,2 +1,12 @@
 .row
-  room
+  %section.panel
+    .panel-body
+      %table.table.table-condensed
+        %thead
+          %th Heading
+          %th Heading
+        %tbody
+          - @rooms.each do |room|
+            %tr
+              %td= room[:id]
+              %td= room[:name]
