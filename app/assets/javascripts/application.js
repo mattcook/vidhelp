@@ -9,5 +9,6 @@
 //= require hark
 //= require simplepeer
 
+//= require draw
 //= require controllers
 //= require main

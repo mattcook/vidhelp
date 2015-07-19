@@ -27,6 +27,7 @@ Twilio.getUserMedia().then(
   function (mediaStream) {
     previewMedia.addStream(mediaStream);
     previewMedia.attach('#allVideos');
+    drawFunction();
   },
   function (error) {
     console.error('Unable to access local media', error);
