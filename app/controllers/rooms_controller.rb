@@ -7,4 +7,6 @@ class RoomsController < ApplicationController
   def show
     @room = Room.get_all.last
   end
+
+
 end
