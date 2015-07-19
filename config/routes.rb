@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   match '/auth/pay' => 'auth#pusher', via: :post
   root to: 'chats#index'
 
-  resources :chats, only: [:index]
+  resources :chats, only: [:index, :show]
   resources :rooms, only: [:create, :index, :show, :destroy]
 end
