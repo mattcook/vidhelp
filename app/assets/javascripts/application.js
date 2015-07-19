@@ -7,6 +7,7 @@
 //= require angular
 
 //= require pusher
+//= require raty
 //= require hark
 //= require simplepeer
 

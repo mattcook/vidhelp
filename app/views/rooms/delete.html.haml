@@ -1,5 +1,10 @@
 .row
   .col-sm-8.col-sm-offset-2
+    .text-center
+      %h1 Thank you for using Vidhelp!
+      %p Please rate your experience
+      .rate-bar
+
     %form#checkout{:action => root_path, :method => "get"}
       #payment-form
 
@@ -14,3 +19,5 @@
           container: "payment-form"
         });
   });
+
+  $('.rate-bar').raty();
