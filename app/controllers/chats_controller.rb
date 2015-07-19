@@ -1,13 +1,13 @@
 class ChatsController < ApplicationController
 
   def new
-    @room = Room.last
+    @room = Room.get_all.last
   end
   def show
-    @room = Room.last
+    @room = Room.get_all.last
   end
 
   def connect
-    @room = Room.last
+    @room = Room.get_all.last
   end
 end

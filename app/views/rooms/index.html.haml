@@ -13,3 +13,4 @@
               %td= room[:id]
               %td= link_to room[:name], room_path(room[:uuid])
               %td= room[:description]
+              %td= Time.now.to_formatted_s(:short)
