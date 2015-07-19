@@ -5,7 +5,7 @@
 @import '_chat';
 
 body {
-  background-color: #333;
+  background-color: white;
 }
 
 #localVideo {
@@ -88,6 +88,87 @@ body {
   opacity: 0.7;
 }
 
-#checkout{
+a.user-name.pull-right {
+  padding-top: 14px;
+  color: #777;
+  text-decoration: none;
+}
+
+h2.hero-text {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.hero-text {
+  text-align: center;
+  color: white;
+}
+
+.banner {
+  background-image: url("/assets/hero-image.jpg");
+    background-color: black;
+    background-size: cover;
+    height: 180px;
+    margin-top: -20px;
+    padding-top: 40px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position-y: -190px;
+}
+
+.top-spacing {
+  padding-top: 60px;
+}
+
+.category-tile {
+  background-color: black;
+  background-size: cover;
+  height: 250px;
+  width: 250px;
+  margin-right: 50px;
+
+  &.laundry {
+    background-image: url("/assets/laundry.jpg");
+  }
+  &.basement {
+    background-image: url("/assets/basement.jpg");
+  }
+  &.carpet {
+    background-image: url("/assets/carpet.jpg");
+  }
+  &.duct {
+    background-image: url("/assets/duct.jpg");
+  }
+  &.hard-hat {
+    background-image: url("/assets/hard-hat.jpg");
+  }
+  &.heating {
+    background-image: url("/assets/heating.jpg");
+  }
+  &.plumbing {
+    background-image: url("/assets/plumbing.jpg");
+  }
+  &.roofing {
+    background-image: url("/assets/roofing.jpg");
+  }
+  &.door {
+    background-image: url("/assets/door.jpg");
+  }
+}
+
+.black-overlay {
+  background-color: rgba(0,0,0,0.3);
+  background-size: cover;
+  height: 250px;
+  width: 250px;
+  margin-left: -15px;
+  margin-top: -20px;
+}
+
+#checkout {
   margin-top:100px;
 }
