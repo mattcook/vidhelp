@@ -19,6 +19,6 @@ test:
 
 production:
   <<: *default
-  database: vidhelp
-  username: vidhelp
-  password: <%= ENV['RUBY-RAILS-SAMPLE_DATABASE_PASSWORD'] %>
+  database: d1ok6pbif1rtb9
+  username: sevlkfdmljegye
+  password: 239OpmgMcI99-5yulGnoKGvJs7
